@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.AddScholarController">
+   <children>
+      <Text layoutX="124.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金编号：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="124.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金名称：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="124.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金等级：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="颁发年份：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="颁发单位：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_text" layoutX="215.0" layoutY="92.0" prefHeight="23.0" prefWidth="75.0" />
+      <TextField fx:id="name_text" layoutX="214.0" layoutY="136.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="year_text" layoutX="214.0" layoutY="229.0" prefHeight="26.0" prefWidth="76.0" />
+      <TextField fx:id="company_text" layoutX="213.0" layoutY="273.0" prefHeight="26.0" prefWidth="204.0" />
+      <Button fx:id="insert_button" layoutX="215.0" layoutY="323.0" mnemonicParsing="false" onAction="#insert_scholar" text="确定">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <ToggleButtonGroup layoutX="214.0" layoutY="185.0" prefHeight="30.0" prefWidth="225.0" selectionType="SINGLE">
+          <toggles>
+            <RadioButton fx:id="country_level" mnemonicParsing="false" onAction="#country_level_action" text="国家级  " />
+            <RadioButton fx:id="province_level" mnemonicParsing="false" onAction="#province_level_action" text="省级" />
+            <RadioButton fx:id="school_level" mnemonicParsing="false" onAction="#school_level_action" text="校级  " />
+          </toggles>
+      </ToggleButtonGroup>
+      <Button fx:id="reset_button" layoutX="316.0" layoutY="323.0" mnemonicParsing="false" onAction="#reset_text" text="重置">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="252.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金种类添加">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="32.0" layoutX="210.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Add_File.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="85.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/id_card_smile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="104.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/time.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="63.0" layoutX="101.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Company.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="85.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="85.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bar_chart.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

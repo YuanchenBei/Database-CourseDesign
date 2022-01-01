@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.UpdateStudentController">
+   <children>
+      <AnchorPane fx:id="result_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Text layoutX="268.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改结果">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="24.0" layoutX="236.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/username.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="result_tab" layoutX="52.0" layoutY="100.0" prefHeight="200.0" prefWidth="496.0">
+              <columns>
+                  <TableColumn fx:id="id_col" prefWidth="105.0" text="学号" />
+                  <TableColumn fx:id="name_col" prefWidth="86.0" text="姓名" />
+                  <TableColumn fx:id="sex_col" prefWidth="52.0" text="性别" />
+                  <TableColumn fx:id="birth_col" prefWidth="100.0" text="出生日期" />
+                <TableColumn fx:id="grade_col" prefWidth="67.0" text="年级" />
+                <TableColumn fx:id="major_col" prefWidth="90.0" text="专业号" />
+              </columns>
+            </TableView>
+            <Button layoutX="280.0" layoutY="321.0" mnemonicParsing="false" onAction="#return_action" text="返回" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="modify_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Text layoutX="168.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生信息：">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#1ec005" layoutX="249.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="您可在下方对信息进行编辑修改" />
+            <ImageView fitHeight="31.0" fitWidth="42.0" layoutX="143.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/username.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="168.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生学号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="168.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生姓名：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="168.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生性别：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="168.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="出生日期：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="196.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="年级：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="182.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="专业号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="id_text" layoutX="249.0" layoutY="197.0" />
+            <TextField fx:id="name_text" layoutX="249.0" layoutY="227.0" />
+            <TextField fx:id="sex_text" layoutX="249.0" layoutY="256.0" prefHeight="23.0" prefWidth="161.0" />
+            <TextField fx:id="birth_text" layoutX="249.0" layoutY="283.0" />
+            <TextField fx:id="grade_text" layoutX="249.0" layoutY="310.0" />
+            <TextField fx:id="major_text" layoutX="249.0" layoutY="335.0" />
+            <Button layoutX="249.0" layoutY="363.0" mnemonicParsing="false" onAction="#modify_action" text="确认修改" />
+            <Button layoutX="346.0" layoutY="363.0" mnemonicParsing="false" onAction="#reset_action" text="取消修改" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="main_pane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="252.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生信息修改">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="221.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/write.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="134.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="修改的学生学号：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="96.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/id_card_person.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="modify_id_text" layoutX="246.0" layoutY="104.0" />
+            <Button layoutX="430.0" layoutY="104.0" mnemonicParsing="false" onAction="#query_action" text="查询信息" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

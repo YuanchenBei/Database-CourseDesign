@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.DeleteScholarshipController">
+   <children>
+      <Text layoutX="240.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除奖学金信息" wrappingWidth="119.33331298828125">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="28.0" fitWidth="22.0" layoutX="211.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/delete.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="86.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除的奖学金编号：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_text" layoutX="215.0" layoutY="118.0" prefHeight="23.0" prefWidth="186.0" />
+      <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="59.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="417.0" layoutY="118.0" mnemonicParsing="false" onAction="#query_action" text="查询信息" />
+      <TableView fx:id="delete_tab" layoutX="59.0" layoutY="156.0" prefHeight="166.0" prefWidth="483.0" visible="false">
+        <columns>
+            <TableColumn fx:id="id_col" prefWidth="67.0" text="奖学金编号" />
+            <TableColumn fx:id="name_col" prefWidth="163.6666259765625" text="奖学金名称" />
+          <TableColumn fx:id="rank_col" prefWidth="64.66668701171875" text="奖学金等级" />
+          <TableColumn fx:id="year_col" prefWidth="54.66668701171875" text="颁发年份" />
+            <TableColumn fx:id="issuer_col" prefWidth="131.0" text="颁发单位" />
+        </columns>
+      </TableView>
+      <Button fx:id="del_button" layoutX="222.0" layoutY="343.0" mnemonicParsing="false" onAction="#delete_action" text="确认删除" visible="false" />
+      <Button fx:id="reset_button" layoutX="339.0" layoutY="343.0" mnemonicParsing="false" onAction="#reset_action" text="取消" visible="false" />
+   </children>
+</AnchorPane>

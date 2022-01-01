@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.DeleteStuScholarController">
+   <children>
+      <Text layoutX="246.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生获奖信息删除">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="211.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/delete.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="140.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除的获奖学生学号：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="114.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/username.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="167.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="所获奖学金编号：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="32.0" layoutX="111.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/title.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="del_stu_text" layoutX="279.0" layoutY="81.0" />
+      <TextField fx:id="del_scholar_text" layoutX="279.0" layoutY="122.0" />
+      <Button layoutX="310.0" layoutY="157.0" mnemonicParsing="false" onAction="#query_action" text="查询输入的信息" />
+      <TableView fx:id="del_tab" layoutX="34.0" layoutY="200.0" prefHeight="123.0" prefWidth="553.0" visible="false">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="108.33331298828125" text="学生学号" />
+          <TableColumn fx:id="name_col" prefWidth="81.0" text="学生姓名" />
+            <TableColumn fx:id="major_col" prefWidth="152.0" text="学生专业" />
+            <TableColumn fx:id="scholar_name_col" prefWidth="212.6666259765625" text="奖学金名称" />
+        </columns>
+      </TableView>
+      <Button fx:id="yes_button" layoutX="236.0" layoutY="335.0" mnemonicParsing="false" onAction="#yes_action" text="确定" visible="false" />
+      <Button fx:id="no_button" layoutX="340.0" layoutY="335.0" mnemonicParsing="false" onAction="#no_action" text="取消" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.ReportExportController">
+   <children>
+      <Text layoutX="268.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="报表生成">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="241.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/write.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="114.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请选择您要生成的报表：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="332.0" layoutY="242.0" mnemonicParsing="false" onAction="#print_event" text="打印所选报表" />
+      <ImageView fitHeight="57.0" fitWidth="34.0" layoutX="80.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/printer.png" />
+         </image>
+      </ImageView>
+      <SplitMenuButton fx:id="top_button" layoutX="268.0" layoutY="122.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="216.0" text="可用报表">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#scholar_id5" text="2019-2020学年国家励志奖学金" />
+        </items>
+      </SplitMenuButton>
+      <Button layoutX="197.0" layoutY="242.0" mnemonicParsing="false" onAction="#view_event" text="查看所选报表" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.MainFrameController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fitHeight="131.0" fitWidth="142.0" layoutX="429.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/start_picture1.png" />
+               </image>
+            </ImageView>
+            <Text fill="#337cf2" layoutX="437.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="欢迎使用" wrappingWidth="126.24020385742188">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="356.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="奖学金信息管理系统">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="374.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scholarship management system">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#eb7e3b" fontSmoothingType="LCD" layoutX="412.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="请选择上方菜单开始操作">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="奖学金信息查询">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#query_stu_scholar_event" text="学生获奖查询" />
+                  <MenuItem mnemonicParsing="false" onAction="#query_scholarship_event" text="奖学金查询" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="奖学金数据维护">
+               <items>
+                  <Menu mnemonicParsing="false" text="学生获奖记录维护">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#add_stu_scholar_event" text="添加学生获奖记录" />
+                        <MenuItem mnemonicParsing="false" onAction="#update_stu_scholar_event" text="修改学生获奖记录" />
+                        <MenuItem mnemonicParsing="false" onAction="#delete_stu_scholar_event" text="删除学生获奖记录" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="奖学金维护">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#add_scholarship_event" text="添加新的奖学金" />
+                        <MenuItem mnemonicParsing="false" onAction="#update_scholar_event" text="修改奖学金信息" />
+                        <MenuItem mnemonicParsing="false" onAction="#delete_scholar_event" text="删除奖学金信息" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="学生信息维护">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#add_student_event" text="添加学生信息" />
+                  <MenuItem mnemonicParsing="false" onAction="#update_stu_event" text="修改学生信息" />
+                  <MenuItem mnemonicParsing="false" onAction="#delete_student_event" text="删除学生信息" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="生成报表">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#report_export_event" text="生成/打印报表" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" text="如何使用" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

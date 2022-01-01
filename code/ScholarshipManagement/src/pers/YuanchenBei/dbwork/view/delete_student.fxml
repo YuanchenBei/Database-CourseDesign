@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pers.YuanchenBei.dbwork.view.DeleteStudentController">
+   <children>
+      <Text layoutX="252.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="学生信息删除">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="28.0" fitWidth="19.0" layoutX="226.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/delete.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="124.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="删除的学生学号：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="86.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/id_card_person.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_text" layoutX="236.0" layoutY="103.0" />
+      <Button layoutX="418.0" layoutY="103.0" mnemonicParsing="false" onAction="#query_action" text="查询信息" />
+      <TableView fx:id="del_tab" layoutX="61.0" layoutY="146.0" prefHeight="200.0" prefWidth="511.0" visible="false">
+        <columns>
+            <TableColumn fx:id="id_col" prefWidth="107.66668701171875" text="学号" />
+            <TableColumn fx:id="name_col" prefWidth="67.33331298828125" text="姓名" />
+            <TableColumn fx:id="sex_col" prefWidth="58.66668701171875" text="性别" />
+          <TableColumn fx:id="date_col" prefWidth="125.66668701171875" text="出生日期" />
+          <TableColumn fx:id="grade_col" prefWidth="64.33331298828125" text="年级" />
+            <TableColumn fx:id="major_col" prefWidth="90.33331298828125" text="专业号" />
+        </columns>
+      </TableView>
+      <Button fx:id="del_button" layoutX="236.0" layoutY="356.0" mnemonicParsing="false" onAction="#delete_action" text="确认删除" visible="false" />
+      <Button fx:id="reset_button" layoutX="357.0" layoutY="356.0" mnemonicParsing="false" onAction="#reset_action" text="取消" visible="false" />
+   </children>
+</AnchorPane>
